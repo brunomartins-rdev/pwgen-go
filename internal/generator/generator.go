@@ -25,6 +25,7 @@ func GeneratePassword(options PasswordOptions) string {
 	requiredCharacters := []byte{}
 	allAllowedCharacters := ""
 
+	// TODO: DRY. Put this in a function
 	if options.IncludeLowercase{
 		requiredCharacters = append(
 			requiredCharacters, 
